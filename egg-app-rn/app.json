@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Egg Fertility Detector",
+    "slug": "egg-fertility-detector",
+    "scheme": "eggscan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F6F2EA"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.eggscan.fertilitydetector",
+      "infoPlist": {
+        "NSCameraUsageDescription": "EggScan uses your camera to photograph candled eggs for fertility analysis.",
+        "NSPhotoLibraryUsageDescription": "EggScan needs access to your photo library so you can pick an existing egg candling photo."
+      }
+    },
+    "android": {
+      "package": "com.eggscan.fertilitydetector",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F6F2EA"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "EggScan needs access to your photo library so you can pick an existing egg candling photo.",
+          "cameraPermission": "EggScan uses your camera to photograph candled eggs for fertility analysis."
+        }
+      ],
+      "expo-asset",
+      "expo-sharing",
+      "expo-status-bar"
+    ],
+    "extra": {
+      "eas": {}
+    }
+  }
+}
